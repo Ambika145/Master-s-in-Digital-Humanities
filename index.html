@@ -33,17 +33,9 @@
     <title>Master's in Digital Humanities (MADH) - O.P. Jindal Global University</title>
     <meta name="description" content="Master's in Digital Humanities (MADH) at O.P. Jindal Global University. A 12-month online postgraduate programme from the Jindal School of Liberal Arts and Humanities.">
     <link rel="shortcut icon" type="image/x-icon" href="https://jguonline.edu.in/public/frontend/assets/img/favicon.ico">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-    
-        <link rel="stylesheet" href="style.css?v=202607201150">
-        <link rel="stylesheet" href="responsive.css?v=202607201150">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css?v=feedback-1011">
 
     <!-- Critical: hero layout; enquiry form scrolls inside card only -->
     <style>
@@ -59,7 +51,7 @@
       .hero-info-bar {
         background: linear-gradient(90deg, #1a237e 0%, #4527a0 32%, #7b1fa2 62%, #00acc1 100%) !important;
         position: relative !important;
-        z-index: 5 !important;
+        z-index: 2 !important;
         flex: none !important;
         flex-shrink: 0 !important;
         display: block !important;
@@ -67,6 +59,32 @@
         opacity: 1 !important;
         width: 100% !important;
         max-width: 100% !important;
+      }
+
+      .hero-bottom-bars {
+        position: relative !important;
+        z-index: 2 !important;
+      }
+
+      .hero-section .hero-container {
+        position: relative !important;
+        z-index: 3 !important;
+      }
+
+      .hero-scholarship-bar {
+        background: #3f2a8c !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        text-align: center !important;
+        padding: 0.55rem 1rem !important;
+      }
+
+      .hero-scholarship-text {
+        margin: 0 !important;
+        color: #fff !important;
+        font-size: clamp(0.78rem, 2.8vw, 0.95rem) !important;
+        font-weight: 600 !important;
+        line-height: 1.4 !important;
       }
 
       .features-section {
@@ -85,7 +103,7 @@
         width: auto !important;
       }
 
-      .hero-section .header-logo-ideate {
+      .hero-section .header-logo-jsbf {
         height: 6.5rem !important;
         max-height: 6.5rem !important;
         width: auto !important;
@@ -96,6 +114,7 @@
         visibility: visible !important;
         opacity: 1 !important;
         margin-top: 1.25rem !important;
+        margin-bottom: 0.75rem !important;
         padding: 0.9rem 2.85rem !important;
         background-color: #ffffff !important;
         background-image:
@@ -114,18 +133,20 @@
         box-shadow: 0 6px 18px rgba(74, 20, 140, 0.16) !important;
         flex-shrink: 0 !important;
         position: relative !important;
-        z-index: 8 !important;
+        z-index: 12 !important;
         align-self: flex-start !important;
         cursor: pointer !important;
       }
 
       .hero-section .hero-title {
-        font-size: clamp(1.75rem, 3vw, 2.5rem) !important;
-        line-height: 1.16 !important;
+        font-size: clamp(2rem, 3.4vw, 2.85rem) !important;
+        line-height: 1.2 !important;
+        overflow: visible !important;
+        padding-top: 0.12em !important;
       }
 
       .hero-section .hero-subtitle {
-        font-size: clamp(0.9rem, 1.3vw, 1.1rem) !important;
+        font-size: clamp(0.95rem, 1.4vw, 1.15rem) !important;
         font-weight: 800 !important;
       }
 
@@ -164,11 +185,14 @@
         .hero-section {
           min-height: auto !important;
           max-height: none !important;
-          overflow: visible !important;
+          overflow-x: clip !important;
+          overflow-y: visible !important;
+          width: 100% !important;
+          max-width: 100% !important;
         }
 
         .hero-section .header-logo-jgu,
-        .hero-section .header-logo-ideate {
+        .hero-section .header-logo-jsbf {
           height: 3.5rem !important;
           max-height: 3.5rem !important;
         }
@@ -183,68 +207,19 @@
         }
 
         .hero-section .hero-right {
-          width: 100% !important;
-          max-width: min(100%, 28rem) !important;
-          margin-left: auto !important;
-          margin-right: auto !important;
+          width: min(100%, 30rem) !important;
+          max-width: min(100%, 30rem) !important;
           margin-bottom: clamp(1.25rem, 4vw, 2rem) !important;
         }
 
         .hero-section .hero-enquiry-card {
-          min-height: 0 !important;
-          max-height: none !important;
-          height: auto !important;
-          padding: 1.25rem 1.1rem 1.1rem !important;
-          border-radius: 1.15rem !important;
-          overflow: visible !important;
+          min-height: 18rem !important;
+          max-height: min(32rem, 78vh) !important;
         }
 
         .hero-section .hero-npf-scroll {
-          max-height: none !important;
-          overflow: visible !important;
-        }
-
-        .hero-section .hero-enquiry-card .npf_wgts,
-        .hero-section .hero-enquiry-card .npf_wgts iframe {
-          height: 420px !important;
-          min-height: 420px !important;
-          max-height: none !important;
-        }
-      }
-
-      @media screen and (max-width: 767px) {
-        .hero-section .hero-right {
-          width: 100% !important;
-          max-width: 100% !important;
-          padding: 0 0.25rem !important;
-        }
-
-        .hero-section .hero-enquiry-card {
-          padding: 1.15rem 0.95rem 1rem !important;
-          border-radius: 1rem !important;
-        }
-
-        .hero-section .hero-enquiry-card h3 {
-          font-size: 1.1rem !important;
-          margin-bottom: 0.85rem !important;
-        }
-
-        .hero-section .hero-enquiry-card .npf_wgts,
-        .hero-section .hero-enquiry-card .npf_wgts iframe {
-          height: 440px !important;
-          min-height: 440px !important;
-        }
-      }
-
-      @media screen and (max-width: 480px) {
-        .hero-section .hero-enquiry-card {
-          padding: 1rem 0.8rem 0.9rem !important;
-        }
-
-        .hero-section .hero-enquiry-card .npf_wgts,
-        .hero-section .hero-enquiry-card .npf_wgts iframe {
-          height: 460px !important;
-          min-height: 460px !important;
+          max-height: min(360px, 54vh) !important;
+          overflow-y: auto !important;
         }
       }
 
@@ -291,18 +266,18 @@
         }
 
         .hero-section .header-logo-jgu {
-          height: clamp(4.6rem, 14vh, 9rem) !important;
-          max-height: clamp(4.6rem, 14vh, 9rem) !important;
+          height: clamp(4.2rem, 9.5vh, 6rem) !important;
+          max-height: clamp(4.2rem, 9.5vh, 6rem) !important;
           width: auto !important;
         }
 
-        .hero-section .header-logo-ideate {
+        .hero-section .header-logo-jsbf {
           height: clamp(5.1rem, 15.8vh, 10rem) !important;
           max-height: clamp(5.1rem, 15.8vh, 10rem) !important;
           width: auto !important;
         }
 
-        .hero-main {
+        .hero-section .hero-main {
           flex: 1 1 auto !important;
           min-height: 0 !important;
           max-height: 100% !important;
@@ -310,34 +285,52 @@
           align-items: end !important;
           padding-bottom: 0 !important;
           margin-bottom: 0 !important;
+          box-sizing: border-box !important;
         }
 
         .hero-left {
-          overflow: hidden !important;
+          overflow: visible !important;
           align-self: center !important;
           justify-content: center !important;
           min-height: 0 !important;
+          margin-top: 0 !important;
+          padding-top: 0.35rem !important;
+          padding-bottom: 0.35rem !important;
+          max-height: 100% !important;
+          box-sizing: border-box !important;
+          position: relative !important;
+          z-index: 4 !important;
+        }
+
+        .hero-left .btn-apply-now,
+        .hero-section .btn-apply-now {
+          margin-bottom: 1rem !important;
+          z-index: 12 !important;
+          position: relative !important;
         }
 
         .hero-section .hero-title {
-          font-size: clamp(1.75rem, 5vh, 2.85rem) !important;
-          line-height: 1.14 !important;
+          font-size: clamp(2.1rem, min(5.6vh, 0.6rem + 2.5vw), 3.25rem) !important;
+          line-height: 1.22 !important;
+          overflow: visible !important;
+          padding-top: 0.32em !important;
+          margin-top: 0 !important;
         }
 
         .hero-section .hero-title-rule {
-          margin-top: clamp(0.4rem, 1.4vh, 0.9rem) !important;
+          margin-top: clamp(0.5rem, 1.7vh, 1.1rem) !important;
         }
 
         .hero-section .hero-subtitle {
-          font-size: clamp(0.9rem, 2.4vh, 1.35rem) !important;
-          margin-top: clamp(0.6rem, 1.9vh, 1.25rem) !important;
-          line-height: 1.38 !important;
+          font-size: clamp(1.1rem, min(3.1vh, 0.5rem + 1.15vw), 1.7rem) !important;
+          margin-top: clamp(0.75rem, 2.4vh, 1.55rem) !important;
+          line-height: 1.4 !important;
         }
 
         .hero-section .hero-description {
-          font-size: clamp(0.9rem, 2.1vh, 1.25rem) !important;
-          margin-top: clamp(0.5rem, 1.5vh, 1rem) !important;
-          line-height: 1.52 !important;
+          font-size: clamp(0.98rem, 2.45vh, 1.45rem) !important;
+          margin-top: clamp(0.6rem, 1.9vh, 1.25rem) !important;
+          line-height: 1.55 !important;
         }
 
         .hero-section .btn-apply-now {
@@ -354,7 +347,7 @@
           display: block !important;
           visibility: visible !important;
           opacity: 1 !important;
-          padding: clamp(1.25rem, 3.2vh, 2.15rem) 0 !important;
+          padding: clamp(0.85rem, 2.3vh, 1.55rem) 0 !important;
         }
 
         .hero-section .hero-info-inner {
@@ -362,7 +355,8 @@
         }
 
         .hero-section .hero-info-item {
-          font-size: clamp(1rem, 2.6vh, 1.45rem) !important;
+          font-size: clamp(1.2rem, min(3.1vh, 0.75rem + 1.1vw), 1.65rem) !important;
+          font-weight: 800 !important;
         }
 
         .hero-center {
@@ -387,7 +381,7 @@
         }
 
         .hero-student-img {
-          max-height: min(100%, var(--hero-img-max)) !important;
+          max-height: 100% !important;
           max-width: 100% !important;
           width: auto !important;
           height: auto !important;
@@ -441,6 +435,75 @@
         }
       }
 
+      /* Short laptop viewports: tighten spacing only — keep type readable at 100% */
+      @media screen and (min-width: 992px) and (max-height: 800px) {
+        .hero-section {
+          --hero-form-bar-gap: clamp(0.5rem, 1.8vh, 1.25rem) !important;
+        }
+
+        .hero-section .hero-container {
+          padding-top: clamp(0.3rem, 1vh, 0.6rem) !important;
+        }
+
+        .hero-section .hero-header {
+          padding-bottom: 0.15rem !important;
+        }
+
+        .hero-section .header-logo-jgu {
+          height: clamp(3.2rem, 8vh, 4.4rem) !important;
+          max-height: clamp(3.2rem, 8vh, 4.4rem) !important;
+        }
+
+        .hero-section .header-logo-jsbf {
+          height: clamp(3.6rem, 11vh, 5.2rem) !important;
+          max-height: clamp(3.6rem, 11vh, 5.2rem) !important;
+        }
+
+        .hero-left {
+          padding-top: 0.15rem !important;
+          padding-bottom: 0.15rem !important;
+        }
+
+        .hero-section .hero-title {
+          font-size: clamp(1.95rem, min(5.5vh, 0.55rem + 2.45vw), 3.1rem) !important;
+          line-height: 1.18 !important;
+          padding-top: 0.1em !important;
+        }
+
+        .hero-section .hero-title-rule {
+          margin-top: clamp(0.35rem, 1.15vh, 0.7rem) !important;
+        }
+
+        .hero-section .hero-subtitle {
+          font-size: clamp(1.05rem, min(2.85vh, 0.45rem + 1.05vw), 1.5rem) !important;
+          margin-top: clamp(0.5rem, 1.6vh, 1rem) !important;
+          line-height: 1.32 !important;
+        }
+
+        .hero-section .hero-description {
+          font-size: clamp(0.98rem, min(2.5vh, 0.4rem + 0.9vw), 1.3rem) !important;
+          margin-top: clamp(0.35rem, 1.15vh, 0.7rem) !important;
+          line-height: 1.4 !important;
+        }
+
+        .hero-left .btn-apply-now,
+        .hero-section .btn-apply-now {
+          margin-top: clamp(0.6rem, 1.8vh, 1.1rem) !important;
+          margin-bottom: 0.35rem !important;
+          padding: clamp(0.65rem, 1.7vh, 1rem) clamp(2.1rem, 3.4vh, 3rem) !important;
+          font-size: clamp(1rem, min(2.45vh, 0.45rem + 0.8vw), 1.3rem) !important;
+        }
+
+        .hero-info-bar {
+          padding: clamp(0.7rem, 1.9vh, 1.2rem) 0 !important;
+        }
+
+        .hero-section .hero-info-item {
+          font-size: clamp(1.15rem, min(3vh, 0.7rem + 1.05vw), 1.5rem) !important;
+          font-weight: 800 !important;
+        }
+      }
+
       /* 150% Windows scaling only (very short viewport ≈627px). 100% (~940px) and
          125% (~752px) are ABOVE this breakpoint and stay exactly as they are.
          Here we scale the hero down just enough that the whole left column
@@ -463,29 +526,31 @@
           max-height: clamp(3rem, 8.6vh, 5rem) !important;
         }
 
-        .hero-section .header-logo-ideate {
+        .hero-section .header-logo-jsbf {
           height: clamp(3.4rem, 9.6vh, 5.6rem) !important;
           max-height: clamp(3.4rem, 9.6vh, 5.6rem) !important;
         }
 
         .hero-section .hero-title {
-          font-size: clamp(1.3rem, 4vh, 1.85rem) !important;
-          line-height: 1.1 !important;
+          font-size: clamp(1.55rem, min(4.8vh, 0.45rem + 2vw), 2.25rem) !important;
+          line-height: 1.2 !important;
+          overflow: visible !important;
+          padding-top: 0.12em !important;
         }
 
         .hero-section .hero-title-rule {
-          margin-top: clamp(0.28rem, 0.95vh, 0.5rem) !important;
+          margin-top: clamp(0.3rem, 1vh, 0.5rem) !important;
         }
 
         .hero-section .hero-subtitle {
-          font-size: clamp(0.76rem, 1.85vh, 0.95rem) !important;
-          margin-top: clamp(0.38rem, 1.2vh, 0.65rem) !important;
+          font-size: clamp(0.9rem, min(2.4vh, 0.35rem + 0.95vw), 1.15rem) !important;
+          margin-top: clamp(0.4rem, 1.3vh, 0.7rem) !important;
           line-height: 1.32 !important;
         }
 
         .hero-section .hero-description {
-          font-size: clamp(0.75rem, 1.75vh, 0.92rem) !important;
-          margin-top: clamp(0.28rem, 0.95vh, 0.55rem) !important;
+          font-size: clamp(0.76rem, 1.85vh, 0.95rem) !important;
+          margin-top: clamp(0.3rem, 1vh, 0.55rem) !important;
           line-height: 1.4 !important;
         }
 
@@ -496,7 +561,8 @@
         }
 
         .hero-section .hero-info-item {
-          font-size: clamp(0.82rem, 2.1vh, 1.05rem) !important;
+          font-size: clamp(0.95rem, min(2.4vh, 0.5rem + 0.9vw), 1.2rem) !important;
+          font-weight: 800 !important;
         }
 
         .hero-section .hero-enquiry-card h3 {
@@ -539,38 +605,6 @@
         }
       }
 
-      .tuition-tab-panel#tuitionTabFees .tuition-fees-note {
-        text-align: center;
-        margin-top: 0.35rem;
-      }
-
-      @media screen and (min-width: 992px) {
-        .career-pathways-panel,
-        .career-pathways-inner {
-          height: auto;
-          min-height: 0;
-        }
-
-        .career-pathways-inner {
-          grid-template-columns: minmax(220px, 0.95fr) minmax(0, 2.05fr);
-          align-items: center;
-        }
-
-        .career-pathways-title {
-          font-size: clamp(2rem, 2.8vw, 2.75rem);
-        }
-
-        .career-pathways-cards {
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: center;
-        }
-
-        .career-pathways-cards .career-pathway-card {
-          width: calc((100% - 36px) / 3);
-          flex: 0 0 calc((100% - 36px) / 3);
-        }
-      }
     </style>
 </head>
 <body>
@@ -593,9 +627,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="hero-left">
         <h1 class="hero-title">
           <span class="hero-title-line">
-            <span class="hero-title-base">Master&rsquo;s in</span>
+            <span class="hero-title-base">Master&rsquo;s in </span>
           </span>
-          <span class="hero-title-line hero-title-entrepreneurship">Digital Humanities (MADH)</span>
+          <span class="hero-title-gradient">
+            <span class="hero-title-line">Digital Humanities (MADH)</span>
+          </span>
         </h1>
         <div class="hero-title-rule" aria-hidden="true"></div>
         <p class="hero-subtitle">
@@ -624,21 +660,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 
-  <div class="hero-info-bar">
-    <div class="hero-info-inner">
-      <div class="hero-info-item">
-        <strong>Postgraduate Degree</strong>
+  <div class="hero-bottom-bars">
+    <div class="hero-info-bar">
+      <div class="hero-info-inner">
+        <div class="hero-info-item">
+          <strong>Postgraduate Degree</strong>
+        </div>
+        <div class="hero-info-item">
+          <strong>Duration: 12 Months</strong>
+        </div>
+        <div class="hero-info-item">
+          <strong>Mode: Online</strong>
+        </div>
+        <div class="hero-info-item">
+          <strong>Credits: 60</strong>
+        </div>
+        <div class="hero-info-item">
+          <strong>Batch Starts: March 2027</strong>
+        </div>
       </div>
-      <div class="hero-info-item">
-        <strong>Duration: 12 Months</strong>
-      </div>
-      <div class="hero-info-item">
-        <strong>Mode: Online</strong>
-      </div>
-      <div class="hero-info-item">
-        <strong>Credits: 60</strong>
-      </div>
-      <!-- TODO: Programme fee is marked Need Info in the content source and is not shown here. -->
     </div>
   </div>
 </section>
@@ -707,6 +747,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="programme-overview-section section-global">
   <div class="container programme-overview-container">
     <div class="programme-overview-inner">
+      <div class="programme-overview-content">
+        <h2 class="programme-overview-heading">Programme Overview</h2>
+        <div class="programme-overview-copy">
+          <p class="programme-overview-text">
+            <strong>The Digital World Needs More Than Technology. It Needs Human Understanding.</strong>
+          </p>
+          <p class="programme-overview-text">
+            As technology reshapes how we create, preserve, analyse, and share knowledge, professionals need the ability to understand both digital systems and their social, cultural, and ethical implications.
+          </p>
+          <p class="programme-overview-text">
+            The <strong>Master&rsquo;s in Digital Humanities</strong> equips learners with interdisciplinary skills to explore digital research, storytelling, archives, data analysis, and public-facing scholarship.
+          </p>
+          <p class="programme-overview-text">
+            The programme balances conceptual understanding with technical training through digital projects and capstone work. It enables learners to apply digital methods, research skills, and ethical technology practices across academic, cultural, media, and social impact sectors.
+          </p>
+        </div>
+      </div>
+
       <div class="programme-overview-media">
         <figure class="programme-overview-campus">
           <img src="assets/programme-campus.png?v=3" alt="O.P. Jindal Global University campus" class="programme-overview-img">
@@ -717,25 +775,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <span class="programme-learn-more-arrow" aria-hidden="true">&#8594;</span>
           </a>
           <figure class="programme-overview-finance">
-            <img src="assets/programme-startup.png?v=1" alt="Digital humanities visual" class="programme-overview-img">
+            <img src="assets/programme-heritage.png?v=1" alt="Carved stone hand holding a lotus against a heritage temple, representing culture and heritage in digital humanities" class="programme-overview-img">
           </figure>
         </div>
-      </div>
-
-      <div class="programme-overview-content">
-        <h2 class="programme-overview-heading">Programme Overview</h2>
-        <p class="programme-overview-text">
-          <strong>The Digital World Needs More Than Technology. It Needs Human Understanding.</strong>
-        </p>
-        <p class="programme-overview-text">
-          As technology reshapes how we create, preserve, analyse, and share knowledge, professionals need the ability to understand both digital systems and their social, cultural, and ethical implications.
-        </p>
-        <p class="programme-overview-text">
-          The <strong>Master&rsquo;s in Digital Humanities</strong> equips learners with interdisciplinary skills to explore digital research, storytelling, archives, data analysis, and public-facing scholarship.
-        </p>
-        <p class="programme-overview-text">
-          The programme balances conceptual understanding with technical training through digital projects and capstone work. It enables learners to apply digital methods, research skills, and ethical technology practices across academic, cultural, media, and social impact sectors.
-        </p>
       </div>
     </div>
   </div>
@@ -744,6 +786,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="skills-section section-global">
   <div class="container skills-container">
     <h2 class="skills-section-title">Why Choose This Programme?</h2>
+    <p class="skill-card-desc text-center">This programme helps learners develop expertise in:</p>
 
     <div class="skills-carousel-wrap">
       <div class="skills-carousel-viewport">
@@ -754,6 +797,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="skill-icon-wrap"><img class="skill-icon" src="assets/skill-icon-financial.png" alt=""></div>
                 <div class="skill-card-body">
                   <h3 class="skill-card-title">Digital Research Methods</h3>
+                  <hr class="skill-card-line">
+                  <p class="skill-card-desc">Learn to frame humanities questions and investigate them with digital sources, tools, and reproducible methods.</p>
                 </div>
               </div>
             </div>
@@ -762,6 +807,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="skill-icon-wrap"><img class="skill-icon" src="assets/skill-icon-analytical.png" alt=""></div>
                 <div class="skill-card-body">
                   <h3 class="skill-card-title">Data Handling and Analysis</h3>
+                  <hr class="skill-card-line">
+                  <p class="skill-card-desc">Collect, clean, and interpret cultural and textual data to uncover patterns across history, literature, and society.</p>
                 </div>
               </div>
             </div>
@@ -770,6 +817,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="skill-icon-wrap"><img class="skill-icon" src="assets/skill-icon-fintech.png" alt=""></div>
                 <div class="skill-card-body">
                   <h3 class="skill-card-title">Digital Storytelling</h3>
+                  <hr class="skill-card-line">
+                  <p class="skill-card-desc">Turn research into engaging narratives, exhibits, and multimedia projects for public audiences.</p>
                 </div>
               </div>
             </div>
@@ -781,6 +830,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="skill-icon-wrap"><img class="skill-icon" src="assets/skill-icon-analytics.png" alt=""></div>
                 <div class="skill-card-body">
                   <h3 class="skill-card-title">Mapping and GIS Tools</h3>
+                  <hr class="skill-card-line">
+                  <p class="skill-card-desc">Use spatial tools to map places, movements, and events and see cultural and historical stories in new ways.</p>
                 </div>
               </div>
             </div>
@@ -789,6 +840,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="skill-icon-wrap"><img class="skill-icon" src="assets/skill-icon-problem-solving.png" alt=""></div>
                 <div class="skill-card-body">
                   <h3 class="skill-card-title">Digital Archives</h3>
+                  <hr class="skill-card-line">
+                  <p class="skill-card-desc">Understand how heritage, records, and memory are preserved, organised, and made accessible online.</p>
                 </div>
               </div>
             </div>
@@ -797,6 +850,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="skill-icon-wrap"><img class="skill-icon" src="assets/skill-icon-career.png" alt=""></div>
                 <div class="skill-card-body">
                   <h3 class="skill-card-title">Ethical Technology Practices</h3>
+                  <hr class="skill-card-line">
+                  <p class="skill-card-desc">Engage critically with AI, data, and access, and apply inclusive, responsible approaches to digital work.</p>
                 </div>
               </div>
             </div>
@@ -808,6 +863,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="skill-icon-wrap"><img class="skill-icon" src="assets/skill-icon-ethics.png" alt=""></div>
                 <div class="skill-card-body">
                   <h3 class="skill-card-title">Computational Approaches to Humanities Research</h3>
+                  <hr class="skill-card-line">
+                  <p class="skill-card-desc">Apply text analysis, data visualisation, and basic coding to humanities research, with no prior experience needed.</p>
                 </div>
               </div>
             </div>
@@ -826,22 +883,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="know-more-section section-global">
   <div class="container know-more-container">
     <div class="know-more-inner">
+      <div class="know-more-media">
+        <img src="assets/know-more-digital-humanities.png?v=1" alt="Learner taking notes beside a laptop, studying digital humanities" class="know-more-img">
+      </div>
       <div class="know-more-content">
         <h3 class="know-more-title">Course Structure</h3>
         <p class="know-more-lead">Explore the complete programme details.</p>
         <p class="know-more-text">
           Download the brochure or visit the website to view the detailed curriculum, course structure, credits, learning outcomes, and faculty profiles.
         </p>
-        <a href="#" class="btn know-more-cta fw-bold npfWidgetButton npfWidget-50f370047ec007cde1c07dfdad322dbc">DOWNLOAD BROCHURE</a>
-      </div>
-      <div class="know-more-media">
-        <img src="assets/know-more-brochure.png?v=2" alt="Programme brochure visual" class="know-more-img">
+        <a href="#" class="btn know-more-cta font-weight-bold npfWidgetButton npfWidget-50f370047ec007cde1c07dfdad322dbc">DOWNLOAD BROCHURE</a>
       </div>
     </div>
   </div>
 </section>
 
-<section class="tuition-section section-global">
+<section class="tuition-section section-global" id="fees">
   <div class="tuition-panel tuition-panel--fees" id="tuitionPanel">
     <img class="tuition-panel-bg" id="tuitionPanelBg" src="assets/tuition-fees-bg.png?v=2" alt="" aria-hidden="true">
     <div class="tuition-panel-overlay" aria-hidden="true"></div>
@@ -856,8 +913,112 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
 
       <div class="tuition-tab-panel active" id="tuitionTabFees" role="tabpanel" aria-labelledby="tuitionTabBtnFees">
-        <!-- TODO: Fee structure information required. Amounts, due dates, instalments, and EMI details are marked Need Info and are not shown. -->
-        <p class="tuition-fees-note"><em>Want the complete breakdown? Get detailed insights on fee plans, payment schedules, and financing options.</em></p>
+        <div class="tuition-table-wrap">
+          <table class="tuition-table">
+            <thead>
+              <tr>
+                <th>Fee</th>
+                <th>Amount</th>
+                <th>Due Date</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Fee">Registration Amount</td>
+                <td data-label="Amount">INR 25,000</td>
+                <td data-label="Due Date">Upon acceptance of Offer Letter</td>
+              </tr>
+              <tr>
+                <td data-label="Fee">Instalment 1</td>
+                <td data-label="Amount">INR 1,25,000</td>
+                <td data-label="Due Date">Before Batch Start Date</td>
+              </tr>
+              <tr>
+                <td data-label="Fee">Instalment 2</td>
+                <td data-label="Amount">INR 1,25,000</td>
+                <td data-label="Due Date">15-Jul-27</td>
+              </tr>
+              <tr class="total">
+                <td data-label="Fee">Total Tuition Fee</td>
+                <td data-label="Amount">INR 2,75,000</td>
+                <td data-label="Due Date">&mdash;</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="payment-options-block">
+          <div class="payment-options-header">
+            <p class="payment-options-eyebrow">Flexible Financing</p>
+            <h3 class="payment-options-title">Tuition Fee &amp; Payment Options</h3>
+            <p class="payment-options-intro">We offer flexible payment options to help learners manage their programme fees conveniently. Available payment options may vary depending on the programme and applicant category.</p>
+          </div>
+
+          <section class="payment-audience" aria-labelledby="pay-indian-heading">
+            <div class="payment-audience-head">
+              <h4 class="payment-options-subtitle" id="pay-indian-heading">For Indian Nationals</h4>
+              <p class="payment-options-lead">You may choose from the following payment options:</p>
+            </div>
+            <div class="payment-cards">
+              <article class="payment-card">
+                <span class="payment-card-tag">Option 1</span>
+                <h5 class="payment-option-name">Full Payment</h5>
+                <p class="payment-card-highlight">Pay remaining fee in one go</p>
+                <ul>
+                  <li><strong>Registration Fee:</strong> Pay the applicable registration fee at the time of registration.</li>
+                  <li><strong>Remaining Programme Fee:</strong> Pay the complete remaining programme fee within 10 days from the date of registration.</li>
+                </ul>
+              </article>
+              <article class="payment-card payment-card--jodo">
+                <span class="payment-card-tag">Option 2</span>
+                <h5 class="payment-option-name">Jodo Flex</h5>
+                <p class="payment-card-highlight">3, 6 or 9 instalments</p>
+                <ul>
+                  <li><strong>Registration Fee:</strong> Pay the applicable registration fee at the time of registration.</li>
+                  <li><strong>Remaining Programme Fee:</strong> Pay the remaining programme fee through a structured instalment plan of 3, 6, or 9 instalments, as per the applicable payment schedule and terms.</li>
+                </ul>
+              </article>
+              <article class="payment-card payment-card--jodo payment-card--featured">
+                <span class="payment-card-tag">Option 3</span>
+                <span class="payment-card-badge">Popular</span>
+                <h5 class="payment-option-name">Jodo EMI &ndash; 12 Months</h5>
+                <p class="payment-card-highlight">Monthly EMI over 12 months</p>
+                <ul>
+                  <li><strong>Registration Fee:</strong> Pay the applicable registration fee at the time of registration.</li>
+                  <li><strong>Remaining Programme Fee:</strong> Pay the remaining programme fee in monthly instalments over 12 months, subject to eligibility, approval, and applicable terms and conditions.</li>
+                </ul>
+              </article>
+            </div>
+            <p class="payment-options-note"><strong>Important Note:</strong> Indian citizens, including Non-Resident Indians (NRIs), who have valid Indian Aadhaar and PAN details may apply using the payment options available for Indian Nationals, subject to applicable eligibility requirements and verification.</p>
+          </section>
+
+          <section class="payment-audience" aria-labelledby="pay-foreign-heading">
+            <div class="payment-audience-head">
+              <h4 class="payment-options-subtitle" id="pay-foreign-heading">For Foreign Nationals</h4>
+              <p class="payment-options-lead">You may choose from the following payment options:</p>
+            </div>
+            <div class="payment-cards payment-cards--two">
+              <article class="payment-card">
+                <span class="payment-card-tag">Option 1</span>
+                <h5 class="payment-option-name">Full Payment</h5>
+                <p class="payment-card-highlight">Pay remaining fee in one go</p>
+                <ul>
+                  <li><strong>Registration Fee:</strong> Pay the applicable registration fee at the time of registration.</li>
+                  <li><strong>Remaining Programme Fee:</strong> Pay the complete programme fee within 10 days from the date of registration.</li>
+                </ul>
+              </article>
+              <article class="payment-card">
+                <span class="payment-card-tag">Option 2</span>
+                <h5 class="payment-option-name">Two-Instalment Payment Plan</h5>
+                <p class="payment-card-highlight">2 scheduled instalments</p>
+                <ul>
+                  <li><strong>Registration Fee:</strong> Pay the applicable registration fee at the time of registration.</li>
+                  <li><strong>Remaining Programme Fee:</strong> Pay the programme fee in two instalments, as per the applicable fee schedule mentioned for the programme.</li>
+                </ul>
+              </article>
+            </div>
+          </section>
+        </div>
       </div>
 
       <div class="tuition-tab-panel" id="tuitionTabEligibility" role="tabpanel" aria-labelledby="tuitionTabBtnEligibility" hidden>
@@ -911,7 +1072,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="why-choose-grid">
         <article class="why-choose-card">
           <div class="why-choose-card-icon">
-            <img src="assets/why-choose-icon-1.png?v=1" alt="" aria-hidden="true" class="why-choose-icon-img">
+            <i class="fa-solid fa-laptop why-choose-fa-icon" aria-hidden="true"></i>
           </div>
           <h3 class="why-choose-card-title">Programme Format</h3>
           <p class="why-choose-card-text">1-year, 100% online master&rsquo;s designed for flexible and focused postgraduate learning. Conventional humanities programmes are longer and primarily campus-based, with greater dependence on physical classroom learning.</p>
@@ -919,7 +1080,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <article class="why-choose-card">
           <div class="why-choose-card-icon">
-            <img src="assets/why-choose-icon-2.png?v=1" alt="" aria-hidden="true" class="why-choose-icon-img">
+            <i class="fa-solid fa-layer-group why-choose-fa-icon" aria-hidden="true"></i>
           </div>
           <h3 class="why-choose-card-title">Interdisciplinary Learning</h3>
           <p class="why-choose-card-text">Brings together history, literature, culture, society, technology, and digital methods. Conventional approaches are often centred around individual humanities disciplines with limited integration across digital fields.</p>
@@ -927,7 +1088,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <article class="why-choose-card">
           <div class="why-choose-card-icon">
-            <img src="assets/why-choose-icon-3.png?v=1" alt="" aria-hidden="true" class="why-choose-icon-img">
+            <i class="fa-solid fa-magnifying-glass-chart why-choose-fa-icon" aria-hidden="true"></i>
           </div>
           <h3 class="why-choose-card-title">Digital Methods</h3>
           <p class="why-choose-card-text">Introduces digital methods as part of how learners research, analyse, interpret, and communicate human knowledge. Conventional approaches place greater emphasis on traditional research and interpretation methods.</p>
@@ -935,7 +1096,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <article class="why-choose-card">
           <div class="why-choose-card-icon">
-            <img src="assets/why-choose-icon-4.png?v=1" alt="" aria-hidden="true" class="why-choose-icon-img">
+            <i class="fa-solid fa-palette why-choose-fa-icon" aria-hidden="true"></i>
           </div>
           <h3 class="why-choose-card-title">Creative Digital Practice</h3>
           <p class="why-choose-card-text">Apply learning through digital storytelling, data visualisation, mapping, and digital archives. In a conventional approach, practical digital applications may play a smaller role in the overall learning experience.</p>
@@ -943,7 +1104,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <article class="why-choose-card">
           <div class="why-choose-card-icon">
-            <img src="assets/why-choose-icon-1.png?v=1" alt="" aria-hidden="true" class="why-choose-icon-img">
+            <i class="fa-solid fa-laptop-code why-choose-fa-icon" aria-hidden="true"></i>
           </div>
           <h3 class="why-choose-card-title">Hands-On Projects</h3>
           <p class="why-choose-card-text">Learn through research-driven digital projects that turn concepts into practical outputs. Conventional learning can be more focused on readings, academic research, and theoretical study.</p>
@@ -951,7 +1112,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <article class="why-choose-card">
           <div class="why-choose-card-icon">
-            <img src="assets/why-choose-icon-2.png?v=1" alt="" aria-hidden="true" class="why-choose-icon-img">
+            <i class="fa-solid fa-graduation-cap why-choose-fa-icon" aria-hidden="true"></i>
           </div>
           <h3 class="why-choose-card-title">Capstone Experience</h3>
           <p class="why-choose-card-text">Complete a research-based capstone aligned with your specialisation or area of interest. Conventional final research work is often structured around a predefined dissertation or academic research format.</p>
@@ -959,7 +1120,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <article class="why-choose-card">
           <div class="why-choose-card-icon">
-            <img src="assets/why-choose-icon-3.png?v=1" alt="" aria-hidden="true" class="why-choose-icon-img">
+            <i class="fa-solid fa-puzzle-piece why-choose-fa-icon" aria-hidden="true"></i>
           </div>
           <h3 class="why-choose-card-title">Humanities + Technology</h3>
           <p class="why-choose-card-text">Uses technology to open new ways of studying culture, society, history, and human experiences. In a conventional approach, technology may remain separate from the core humanities learning experience.</p>
@@ -967,9 +1128,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <article class="why-choose-card">
           <div class="why-choose-card-icon">
-            <img src="assets/why-choose-icon-4.png?v=1" alt="" aria-hidden="true" class="why-choose-icon-img">
+            <i class="fa-solid fa-users why-choose-fa-icon" aria-hidden="true"></i>
           </div>
-          <h3 class="why-choose-card-title">Flexible For Diverse Learners</h3>
+          <h3 class="why-choose-card-title">Flexible Learning</h3>
           <p class="why-choose-card-text">Designed for learners from diverse academic and professional backgrounds, with the flexibility of online study. Conventional programmes generally follow fixed academic schedules and campus-based structures.</p>
         </article>
       </div>
@@ -1038,13 +1199,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="career-pathways-panel">
       <img class="career-pathways-bg" src="assets/career-pathways-bg.png?v=2" alt="" aria-hidden="true">
       <div class="career-pathways-overlay" aria-hidden="true"></div>
-      <div class="career-pathways-inner">
+      <div class="career-pathways-inner career-pathways-inner--stacked">
         <h2 class="career-pathways-title">Career<br>Opportunities</h2>
 
         <div class="career-pathways-cards">
           <article class="career-pathway-card">
             <div class="career-pathway-icon">
-              <img src="assets/career-pathway-icon-1.png?v=2" alt="" aria-hidden="true">
+              <i class="fa-solid fa-book-open-reader career-fa-icon" aria-hidden="true"></i>
             </div>
             <h3 class="career-pathway-card-title">Digital Humanities Research &amp; Academia</h3>
             <p class="career-pathway-card-text">Apply digital research skills in academic and research settings.</p>
@@ -1052,7 +1213,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
           <article class="career-pathway-card">
             <div class="career-pathway-icon">
-              <img src="assets/career-pathway-icon-2.png?v=2" alt="" aria-hidden="true">
+              <i class="fa-solid fa-box-archive career-fa-icon" aria-hidden="true"></i>
             </div>
             <h3 class="career-pathway-card-title">Digital Archives and Heritage Management</h3>
             <p class="career-pathway-card-text">Work with digital archives and heritage collections.</p>
@@ -1060,7 +1221,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
           <article class="career-pathway-card">
             <div class="career-pathway-icon">
-              <img src="assets/career-pathway-icon-3.png?v=2" alt="" aria-hidden="true">
+              <i class="fa-solid fa-landmark career-fa-icon" aria-hidden="true"></i>
             </div>
             <h3 class="career-pathway-card-title">Museum and Cultural Institution Projects</h3>
             <p class="career-pathway-card-text">Contribute to projects in museums and cultural institutions.</p>
@@ -1068,7 +1229,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
           <article class="career-pathway-card">
             <div class="career-pathway-icon">
-              <img src="assets/career-pathway-icon-4.png?v=2" alt="" aria-hidden="true">
+              <i class="fa-solid fa-scale-balanced career-fa-icon" aria-hidden="true"></i>
             </div>
             <h3 class="career-pathway-card-title">Digital Policy Research</h3>
             <p class="career-pathway-card-text">Bring research skills to digital policy and ethical technology practice.</p>
@@ -1076,7 +1237,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
           <article class="career-pathway-card">
             <div class="career-pathway-icon">
-              <img src="assets/career-pathway-icon-5.png?v=2" alt="" aria-hidden="true">
+              <i class="fa-solid fa-chalkboard-user career-fa-icon" aria-hidden="true"></i>
             </div>
             <h3 class="career-pathway-card-title">Education Technology</h3>
             <p class="career-pathway-card-text">Support teaching and learning through digital tools.</p>
@@ -1084,7 +1245,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
           <article class="career-pathway-card">
             <div class="career-pathway-icon">
-              <img src="assets/career-pathway-icon-6.png?v=2" alt="" aria-hidden="true">
+              <i class="fa-solid fa-newspaper career-fa-icon" aria-hidden="true"></i>
             </div>
             <h3 class="career-pathway-card-title">Digital Publishing and Content Strategy</h3>
             <p class="career-pathway-card-text">Shape publishing and content for cultural and media work.</p>
@@ -1092,7 +1253,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
           <article class="career-pathway-card">
             <div class="career-pathway-icon">
-              <img src="assets/career-pathway-icon-1.png?v=2" alt="" aria-hidden="true">
+              <i class="fa-solid fa-microphone-lines career-fa-icon" aria-hidden="true"></i>
             </div>
             <h3 class="career-pathway-card-title">Community Storytelling and Public History Initiatives</h3>
             <p class="career-pathway-card-text">Create public-facing storytelling and history projects with communities.</p>
@@ -1100,7 +1261,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
           <article class="career-pathway-card">
             <div class="career-pathway-icon">
-              <img src="assets/career-pathway-icon-2.png?v=2" alt="" aria-hidden="true">
+              <i class="fa-solid fa-hand-holding-heart career-fa-icon" aria-hidden="true"></i>
             </div>
             <h3 class="career-pathway-card-title">NGO and Social Impact Digital Strategy</h3>
             <p class="career-pathway-card-text">Apply digital methods in NGO and social impact work.</p>
@@ -1134,29 +1295,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <img class="recognition-bg" src="assets/recog-campus-bg.png" alt="" aria-hidden="true">
   <div class="recognition-container">
     <h2 class="recognition-title">Recognitions and Accreditations</h2>
-
-    <!-- TODO: Dedicated logo artwork is not provided for every recognition. Existing reference logos are used as temporary placeholders. Recognitions without a matching logo file: Member, Association of Indian Universities (AIU); Global Collaborations with 450+ Leading Universities Worldwide. -->
-    <div class="recognition-grid">
+    <div class="recognition-grid" id="recognitionGrid">
       <div class="rec-card rec-card-small">
-        <img src="assets/recog-1-qs-top150.png" alt="Top 150 Young Universities Worldwide – QS Young University Rankings">
+        <img src="assets/recog-1-qs-top150.png?v=feedback-1011" alt="Top 150 Young Universities Worldwide – QS Young University Rankings">
       </div>
-
       <div class="rec-card rec-card-small">
         <img src="assets/recog-2-eminence.png" alt="Institution of Eminence (IoE) – Ministry of Education, Government of India">
       </div>
-
       <div class="rec-card rec-card-main">
         <img src="assets/recog-3-global-rankings.png" alt="Ranked No. 1 Arts and Humanities Private University in India – QS World University Rankings by Subject 2026. Social Sciences and Management Private University in India – QS World University Rankings by Subject 2026">
       </div>
-
       <div class="rec-card rec-card-small">
-        <img src="assets/recog-4-qs-no1.png" alt="#1 Private University in India – QS World University Rankings 2026">
+        <img src="assets/recog-4-qs-no1.png?v=feedback-1011" alt="#1 Private University in India – QS World University Rankings 2026">
       </div>
-
       <div class="rec-card rec-card-small">
-        <img src="assets/recog-5-online-learning.png" alt="Awarded 5-Star Global QS Rating (2025) – Presented at the House of Lords, London">
+        <img src="assets/recog-5-online-learning.png?v=feedback-1011" alt="Ranked No. 1 Globally for Online Learning (THE Rankings 2024)">
       </div>
     </div>
+    <div class="recognition-dots" id="recognitionDots" role="tablist" aria-label="Recognition slides"></div>
   </div>
 </section>
 <section class="faq-section section-global">
@@ -1170,11 +1326,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="accordion faq-accordion" id="faqLeft">
             <div class="accordion-item">
               <h2 class="accordion-header">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                <button class="accordion-button" type="button" data-toggle="collapse" data-target="#faq1">
                   Is coding experience required?
                 </button>
               </h2>
-              <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqLeft">
+              <div id="faq1" class="collapse show" data-parent="#faqLeft">
                 <div class="accordion-body">
                   No. The programme welcomes learners without coding backgrounds and introduces foundational digital skills, including basic Python proficiency.
                 </div>
@@ -1183,11 +1339,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
             <div class="accordion-item">
               <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                <button class="accordion-button collapsed" type="button" data-toggle="collapse" data-target="#faq2">
                   What is the duration of the programme?
                 </button>
               </h2>
-              <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqLeft">
+              <div id="faq2" class="collapse" data-parent="#faqLeft">
                 <div class="accordion-body">
                   The programme is completed in 1 year across 3 terms with 60 credits.
                 </div>
@@ -1200,11 +1356,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="accordion faq-accordion" id="faqRight">
             <div class="accordion-item">
               <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                <button class="accordion-button collapsed" type="button" data-toggle="collapse" data-target="#faq3">
                   Does the degree have the same value as an offline degree?
                 </button>
               </h2>
-              <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqRight">
+              <div id="faq3" class="collapse" data-parent="#faqRight">
                 <div class="accordion-body">
                   The degree has the same value as an offline degree.
                 </div>
@@ -1221,331 +1377,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="enquire-card">
       <div class="enquire-form-panel">
         <div class="enquire-npf-scroll">
-          <div class="npf_wgts enquire-npf-widget" data-height="520px" data-w="50f370047ec007cde1c07dfdad322dbc"></div>
+          <div class="npf_wgts" data-height="400px" data-w="50f370047ec007cde1c07dfdad322dbc"></div>
         </div>
       </div>
       <div class="enquire-info-panel">
         <div class="info-section">
           <h2>Let's connect and shape your path at JGU!</h2>
-          <p class="info-text">Reach out to know more about programmes, admissions, and opportunities</p>
+          <p class="info-text">Reach out to know more about programmes, admissions, and opportunities.</p>
+          <ul class="enquire-info-list">
+            <li>Admissions help and eligibility guidance</li>
+            <li>Programme details, curriculum, and fees</li>
+            <li>Request a callback from our team</li>
+          </ul>
         </div>
       </div>
     </div>
   </div>
 </section>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"/>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-    
-    
-
-    
-    
-
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  const track = document.getElementById('facultyTrack');
-  const prevBtn = document.querySelector('.faculty-arrow.prev');
-  const nextBtn = document.querySelector('.faculty-arrow.next');
-
-  if (!track || !prevBtn || !nextBtn) return;
-
-  function getScrollAmount() {
-    const member = track.querySelector('.faculty-member');
-    if (!member) return 256;
-    const styles = getComputedStyle(track);
-    const gap = parseFloat(styles.columnGap || styles.gap) || 24;
-    return member.offsetWidth + gap;
-  }
-
-  function updateFacultyArrows() {
-    const maxScroll = track.scrollWidth - track.clientWidth;
-    prevBtn.disabled = track.scrollLeft <= 4;
-    nextBtn.disabled = track.scrollLeft >= maxScroll - 4 || maxScroll <= 0;
-  }
-
-  function scrollFaculty(direction) {
-    track.scrollBy({ left: direction * getScrollAmount(), behavior: 'smooth' });
-  }
-
-  prevBtn.addEventListener('click', function () {
-    scrollFaculty(-1);
-  });
-
-  nextBtn.addEventListener('click', function () {
-    scrollFaculty(1);
-  });
-
-  track.addEventListener('scroll', updateFacultyArrows, { passive: true });
-  window.addEventListener('resize', updateFacultyArrows);
-  window.addEventListener('load', updateFacultyArrows);
-  updateFacultyArrows();
-});
-</script>
-
- <script>
-        function showTab(tabId) {
-            // Hide all tab contents
-            const contents = document.querySelectorAll('.tab-content');
-            contents.forEach(content => {
-                content.classList.remove('active');
-            });
-
-            // Remove active class from all buttons
-            const buttons = document.querySelectorAll('.tab-btn');
-            buttons.forEach(btn => {
-                btn.classList.remove('active');
-            });
-
-            // Show selected tab
-            document.getElementById(tabId).classList.add('active');
-
-            // Add active class to clicked button
-            event.target.classList.add('active');
-        }
-    </script>
-
-  <script>
-        (function () {
-        const track = document.getElementById('carouselTrack');
-        const wrapper = document.getElementById('carouselWrapper');
-        const nextBtn = document.getElementById('nextBtn');
-
-        if (!track || !wrapper || !nextBtn) return;
-
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.carousel-slide');
-        const totalSlides = slides.length;
-
-        if (!totalSlides) return;
-
-        let touchStartX = 0;
-        let touchEndX = 0;
-
-        wrapper.addEventListener('touchstart', (e) => {
-            touchStartX = e.changedTouches[0].screenX;
-        }, { passive: true });
-
-        wrapper.addEventListener('touchend', (e) => {
-            touchEndX = e.changedTouches[0].screenX;
-            handleSwipe();
-        }, { passive: true });
-
-        function handleSwipe() {
-            const swipeThreshold = 50;
-            const diff = touchStartX - touchEndX;
-            
-            if (Math.abs(diff) > swipeThreshold) {
-                if (diff > 0) {
-                    nextSlide();
-                } else {
-                    prevSlide();
-                }
-            }
-        }
-
-        function updateCarousel() {
-            track.style.transform = `translateX(-${currentSlide * 100}%)`;
-            
-            if (currentSlide === totalSlides - 1) {
-                nextBtn.disabled = true;
-            } else {
-                nextBtn.disabled = false;
-            }
-        }
-
-        function nextSlide() {
-            if (currentSlide < totalSlides - 1) {
-                currentSlide++;
-                updateCarousel();
-            }
-        }
-
-        function prevSlide() {
-            if (currentSlide > 0) {
-                currentSlide--;
-                updateCarousel();
-            }
-        }
-
-        updateCarousel();
-        })();
-    </script>
-
-
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  const viewport = document.getElementById('featuresSlider');
-  const prevBtn = document.querySelector('.features-arrow.prev');
-  const nextBtn = document.querySelector('.features-arrow.next');
-
-  if (!viewport || !prevBtn || !nextBtn) return;
-
-  const slides = Array.from(viewport.querySelectorAll('.features-slide'));
-  if (!slides.length) return;
-
-  let currentIndex = 0;
-
-  function goToSlide(index) {
-    currentIndex = Math.max(0, Math.min(index, slides.length - 1));
-    const target = slides[currentIndex];
-
-    if (target) {
-      viewport.scrollTo({
-        left: target.offsetLeft,
-        behavior: 'smooth'
-      });
-    }
-
-    updateArrows();
-  }
-
-  function updateArrows() {
-    prevBtn.disabled = currentIndex <= 0;
-    nextBtn.disabled = currentIndex >= slides.length - 1;
-  }
-
-  function syncIndexFromScroll() {
-    const scrollLeft = viewport.scrollLeft;
-    let closestIndex = 0;
-    let smallestDiff = Infinity;
-
-    slides.forEach(function (slide, index) {
-      const diff = Math.abs(slide.offsetLeft - scrollLeft);
-      if (diff < smallestDiff) {
-        smallestDiff = diff;
-        closestIndex = index;
-      }
-    });
-
-    currentIndex = closestIndex;
-    updateArrows();
-  }
-
-  prevBtn.addEventListener('click', function () {
-    goToSlide(currentIndex - 1);
-  });
-
-  nextBtn.addEventListener('click', function () {
-    goToSlide(currentIndex + 1);
-  });
-
-  viewport.addEventListener('scroll', syncIndexFromScroll, { passive: true });
-  window.addEventListener('resize', function () {
-    goToSlide(currentIndex);
-  });
-
-  goToSlide(0);
-});
-</script>
-
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  const panel = document.getElementById('tuitionPanel');
-  const panelBg = document.getElementById('tuitionPanelBg');
-  const tabButtons = document.querySelectorAll('.tuition-tab');
-  const tabPanels = document.querySelectorAll('.tuition-tab-panel');
-
-  if (!panel || !tabButtons.length || !tabPanels.length) return;
-
-  function switchTuitionTab(tabName) {
-    const isFees = tabName === 'fees';
-
-    panel.classList.toggle('tuition-panel--fees', isFees);
-    panel.classList.toggle('tuition-panel--eligibility', !isFees);
-
-    if (panelBg) {
-      panelBg.src = isFees ? 'assets/tuition-fees-bg.png?v=2' : 'assets/tuition-eligibility-bg.png?v=2';
-    }
-
-    tabButtons.forEach(function (button) {
-      const isActive = button.getAttribute('data-tab') === tabName;
-      button.classList.toggle('active', isActive);
-      button.setAttribute('aria-selected', isActive ? 'true' : 'false');
-    });
-
-    tabPanels.forEach(function (tabPanel) {
-      const isActive = tabPanel.id === (isFees ? 'tuitionTabFees' : 'tuitionTabEligibility');
-      tabPanel.classList.toggle('active', isActive);
-      tabPanel.hidden = !isActive;
-    });
-  }
-
-  tabButtons.forEach(function (button) {
-    button.addEventListener('click', function () {
-      switchTuitionTab(button.getAttribute('data-tab'));
-    });
-  });
-
-  switchTuitionTab('fees');
-});
-</script>
-
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  const viewport = document.querySelector('.skills-carousel-viewport');
-  const track = document.getElementById('skillsCarouselTrack');
-  const dotsContainer = document.getElementById('skillsDots');
-
-  if (!viewport || !track || !dotsContainer) return;
-
-  const slides = Array.from(track.querySelectorAll('.skills-slide'));
-  const dots = dotsContainer.querySelectorAll('.skills-dot');
-  let currentIndex = 0;
-
-  function getSlideWidth() {
-    if (slides[0]) {
-      return slides[0].getBoundingClientRect().width;
-    }
-    return viewport.clientWidth;
-  }
-
-  function goToSlide(index) {
-    currentIndex = Math.max(0, Math.min(index, slides.length - 1));
-    const offset = currentIndex * getSlideWidth();
-    track.style.transform = 'translate3d(-' + offset + 'px, 0, 0)';
-
-    dots.forEach(function (dot, i) {
-      const isActive = i === currentIndex;
-      dot.classList.toggle('active', isActive);
-      dot.setAttribute('aria-selected', isActive ? 'true' : 'false');
-    });
-  }
-
-  dots.forEach(function (dot) {
-    dot.addEventListener('click', function () {
-      goToSlide(parseInt(dot.getAttribute('data-index'), 10));
-    });
-  });
-
-  window.addEventListener('resize', function () {
-    goToSlide(currentIndex);
-  });
-
-  goToSlide(0);
-});
-</script>
-
-<script>
-(function () {
-  var applyBtn = document.getElementById('heroApplyNowBtn');
-  var npfTrigger = document.querySelector('.hero-npf-trigger.npfWidget-50f370047ec007cde1c07dfdad322dbc');
-  if (!applyBtn) return;
-
-  applyBtn.addEventListener('click', function (e) {
-    e.preventDefault();
-    if (npfTrigger) {
-      npfTrigger.click();
-      return;
-    }
-    var fallback = document.querySelector('.npfWidgetButton.npfWidget-50f370047ec007cde1c07dfdad322dbc');
-    if (fallback) fallback.click();
-  });
-})();
-</script>
+<!-- JS: jQuery, Bootstrap 4, page interactions, NPF widgets -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js?v=202610281200"></script>
 
 <script type="text/javascript">var s=document.createElement("script"); s.type="text/javascript"; s.async=true; s.src="https://widgets.in8.nopaperforms.com/emwgts.js"; document.body.appendChild(s);</script>
 
@@ -1565,10 +1417,21 @@ let npfW50f370047ec007cde1c07dfdad322dbc = new NpfWidgetsInit({
 
  
 <footer class="site-footer">
-  <p class="text-center fw-bold">
+  <p class="text-center font-weight-bold">
     &copy; 2026 O.P. Jindal Global University. All Rights Reserved
   </p>
 </footer>
+
+<!-- NoPaperForms / NIAA Chatbot -->
+<div class="npf_chatbots" data-w="a8b32b8ab432456a971900791d70c15b" style="display:none;"></div>
+<script type="text/javascript">
+  var s = document.createElement("script");
+  s.type = "text/javascript";
+  s.async = true;
+  s.src = "https://chatbot.in8.nopaperforms.com/en-gb/backend/bots/niaachtbtscpt.js/e815e394ee244cd1a8dc3bebaf8d81bf/a8b32b8ab432456a971900791d70c15b";
+  document.body.appendChild(s);
+</script>
+
 </body>
 </html>
 
