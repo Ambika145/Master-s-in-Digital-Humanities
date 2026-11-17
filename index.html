@@ -35,7 +35,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="https://jguonline.edu.in/public/frontend/assets/img/favicon.ico">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css?v=feedback-1011">
+    <link rel="stylesheet" href="css/style.css?v=feedback-1117">
 
     <!-- Critical: hero layout; enquiry form scrolls inside card only -->
     <style>
@@ -794,7 +794,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="skills-slide skills-slide--three">
             <div class="skill-card">
               <div class="skill-card-inner">
-                <div class="skill-icon-wrap"><img class="skill-icon" src="assets/skill-icon-financial.png" alt=""></div>
+                <div class="skill-icon-wrap"><i class="fa-solid fa-magnifying-glass skill-fa-icon" aria-hidden="true"></i></div>
                 <div class="skill-card-body">
                   <h3 class="skill-card-title">Digital Research Methods</h3>
                   <hr class="skill-card-line">
@@ -804,7 +804,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
             <div class="skill-card">
               <div class="skill-card-inner">
-                <div class="skill-icon-wrap"><img class="skill-icon" src="assets/skill-icon-analytical.png" alt=""></div>
+                <div class="skill-icon-wrap"><i class="fa-solid fa-chart-column skill-fa-icon" aria-hidden="true"></i></div>
                 <div class="skill-card-body">
                   <h3 class="skill-card-title">Data Handling and Analysis</h3>
                   <hr class="skill-card-line">
@@ -814,7 +814,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
             <div class="skill-card">
               <div class="skill-card-inner">
-                <div class="skill-icon-wrap"><img class="skill-icon" src="assets/skill-icon-fintech.png" alt=""></div>
+                <div class="skill-icon-wrap"><i class="fa-solid fa-photo-film skill-fa-icon" aria-hidden="true"></i></div>
                 <div class="skill-card-body">
                   <h3 class="skill-card-title">Digital Storytelling</h3>
                   <hr class="skill-card-line">
@@ -827,7 +827,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="skills-slide skills-slide--three">
             <div class="skill-card">
               <div class="skill-card-inner">
-                <div class="skill-icon-wrap"><img class="skill-icon" src="assets/skill-icon-analytics.png" alt=""></div>
+                <div class="skill-icon-wrap"><i class="fa-solid fa-map-location-dot skill-fa-icon" aria-hidden="true"></i></div>
                 <div class="skill-card-body">
                   <h3 class="skill-card-title">Mapping and GIS Tools</h3>
                   <hr class="skill-card-line">
@@ -837,7 +837,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
             <div class="skill-card">
               <div class="skill-card-inner">
-                <div class="skill-icon-wrap"><img class="skill-icon" src="assets/skill-icon-problem-solving.png" alt=""></div>
+                <div class="skill-icon-wrap"><i class="fa-solid fa-box-archive skill-fa-icon" aria-hidden="true"></i></div>
                 <div class="skill-card-body">
                   <h3 class="skill-card-title">Digital Archives</h3>
                   <hr class="skill-card-line">
@@ -847,7 +847,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
             <div class="skill-card">
               <div class="skill-card-inner">
-                <div class="skill-icon-wrap"><img class="skill-icon" src="assets/skill-icon-career.png" alt=""></div>
+                <div class="skill-icon-wrap"><i class="fa-solid fa-scale-balanced skill-fa-icon" aria-hidden="true"></i></div>
                 <div class="skill-card-body">
                   <h3 class="skill-card-title">Ethical Technology Practices</h3>
                   <hr class="skill-card-line">
@@ -860,7 +860,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="skills-slide skills-slide--three skills-slide--pair">
             <div class="skill-card">
               <div class="skill-card-inner">
-                <div class="skill-icon-wrap"><img class="skill-icon" src="assets/skill-icon-ethics.png" alt=""></div>
+                <div class="skill-icon-wrap"><i class="fa-solid fa-code skill-fa-icon" aria-hidden="true"></i></div>
                 <div class="skill-card-body">
                   <h3 class="skill-card-title">Computational Approaches to Humanities Research</h3>
                   <hr class="skill-card-line">
@@ -1272,8 +1272,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
-<!-- TODO: Faculty information and faculty photos required. Section is hidden until that content is available. -->
-<section class="faculty-section section-global" hidden>
+<section class="faculty-section section-global" id="faculty">
   <div class="container faculty-container">
     <div class="faculty-header">
       <h2 class="faculty-title">
@@ -1283,9 +1282,45 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </h2>
     </div>
 
-    <div class="faculty-slider-wrap faculty-slider-wrap--static">
+    <div class="faculty-slider-wrap">
+      <button class="faculty-arrow prev" type="button" aria-label="Previous faculty">&#10094;</button>
+      <button class="faculty-arrow next" type="button" aria-label="Next faculty">&#10095;</button>
       <div class="faculty-track" id="facultyTrack">
-        <!-- TODO: Faculty information and faculty photos required -->
+        <article class="faculty-member">
+          <div class="faculty-photo-frame">
+            <img class="faculty-photo" src="assets/faculty/ashwin-varghese.jpg" alt="Prof. (Dr.) Ashwin Varghese">
+          </div>
+          <h5 class="faculty-name">Prof. (Dr.) Ashwin Varghese</h5>
+          <p class="faculty-role">Assistant Professor</p>
+        </article>
+        <article class="faculty-member">
+          <div class="faculty-photo-frame">
+            <img class="faculty-photo" src="assets/faculty/swati-chawla.jpg" alt="Prof. (Dr.) Swati Chawla">
+          </div>
+          <h5 class="faculty-name">Prof. (Dr.) Swati Chawla</h5>
+          <p class="faculty-role">Associate Professor</p>
+        </article>
+        <article class="faculty-member">
+          <div class="faculty-photo-frame">
+            <img class="faculty-photo" src="assets/faculty/sumedha-bhattacharyya.jpg" alt="Prof. (Dr.) Sumedha Bhattacharyya">
+          </div>
+          <h5 class="faculty-name">Prof. (Dr.) Sumedha Bhattacharyya</h5>
+          <p class="faculty-role">Assistant Professor</p>
+        </article>
+        <article class="faculty-member">
+          <div class="faculty-photo-frame">
+            <img class="faculty-photo" src="assets/faculty/anurag-mazumdar.jpg" alt="Prof. Anurag Mazumdar">
+          </div>
+          <h5 class="faculty-name">Prof. Anurag Mazumdar</h5>
+          <p class="faculty-role">Assistant Professor</p>
+        </article>
+        <article class="faculty-member">
+          <div class="faculty-photo-frame">
+            <img class="faculty-photo" src="assets/faculty/poulomi-das.jpg" alt="Prof. (Dr.) Poulomi Das">
+          </div>
+          <h5 class="faculty-name">Prof. (Dr.) Poulomi Das</h5>
+          <p class="faculty-role">Assistant Professor</p>
+        </article>
       </div>
     </div>
   </div>
@@ -1297,7 +1332,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h2 class="recognition-title">Recognitions and Accreditations</h2>
     <div class="recognition-grid" id="recognitionGrid">
       <div class="rec-card rec-card-small">
-        <img src="assets/recog-1-qs-top150.png?v=feedback-1011" alt="Top 150 Young Universities Worldwide – QS Young University Rankings">
+        <img src="assets/recog-1-qs-top150.png?v=feedback-1117" alt="Top 150 Under 50 Globally – QS Young University Rankings">
       </div>
       <div class="rec-card rec-card-small">
         <img src="assets/recog-2-eminence.png" alt="Institution of Eminence (IoE) – Ministry of Education, Government of India">
@@ -1306,10 +1341,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <img src="assets/recog-3-global-rankings.png" alt="Ranked No. 1 Arts and Humanities Private University in India – QS World University Rankings by Subject 2026. Social Sciences and Management Private University in India – QS World University Rankings by Subject 2026">
       </div>
       <div class="rec-card rec-card-small">
-        <img src="assets/recog-4-qs-no1.png?v=feedback-1011" alt="#1 Private University in India – QS World University Rankings 2026">
+        <img src="assets/recog-4-qs-no1.png?v=feedback-1117" alt="#1 Private University in India – QS World University Rankings 2026">
       </div>
       <div class="rec-card rec-card-small">
-        <img src="assets/recog-5-online-learning.png?v=feedback-1011" alt="Ranked No. 1 Globally for Online Learning (THE Rankings 2024)">
+        <img src="assets/recog-5-online-learning.png?v=feedback-1117" alt="Ranked No. 1 Globally for Online Learning (THE Rankings 2024)">
       </div>
     </div>
     <div class="recognition-dots" id="recognitionDots" role="tablist" aria-label="Recognition slides"></div>
@@ -1382,13 +1417,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <div class="enquire-info-panel">
         <div class="info-section">
+          <p class="enquire-info-eyebrow">Master&rsquo;s in Digital Humanities (MADH)</p>
           <h2>Let's connect and shape your path at JGU!</h2>
-          <p class="info-text">Reach out to know more about programmes, admissions, and opportunities.</p>
+          <p class="info-text">Reach out to know more about the programme, admissions, and opportunities.</p>
           <ul class="enquire-info-list">
             <li>Admissions help and eligibility guidance</li>
             <li>Programme details, curriculum, and fees</li>
             <li>Request a callback from our team</li>
           </ul>
+          <div class="enquire-stats" aria-label="Programme at a glance">
+            <div class="enquire-stat"><strong>12 Months</strong><span>Duration</span></div>
+            <div class="enquire-stat"><strong>60</strong><span>Credits</span></div>
+            <div class="enquire-stat"><strong>Online</strong><span>Mode</span></div>
+            <div class="enquire-stat"><strong>Mar 2027</strong><span>Batch Starts</span></div>
+          </div>
+          <p class="enquire-deadline">Applications close on 31st December 2026</p>
         </div>
       </div>
     </div>
